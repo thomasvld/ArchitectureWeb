@@ -3,17 +3,29 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 218, 217, 214;
+  --background-start-rgb: 60, 80, 80;
+  --background-end-rgb: 60, 80, 80;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+h1 {
+  font-size: 10vh;
+}
+button{
+  background-color: #e9e9ed;
+  border: 0.2px solid #8f8f9d;
+  border-radius: 5px;
+  padding: 3px;
+  color: black;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: small;
+  text-align: center;
+  text-decoration: none;
+  cursor: default;
+}
+
+h2 {
+  font-size: 8vh;
 }
 
 body {
