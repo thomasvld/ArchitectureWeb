@@ -1,23 +1,27 @@
 import * as React from "react";
+import Link from "next/link";
 
 export default function HomeButton() {
   return (
     <>
-      <a href="/home">
+      <Link href="/">
         <button type="button">Home</button>
-      </a>
-      <a href="/bleach">
+      </Link>
+      <Link href="/bleach">
         <button type="button">Bleach</button>
-      </a>
-      <a href="/dragonball">
+      </Link>
+      <Link href="/dragonball">
         <button type="button">Dragon Ball</button>
-      </a>
-      <a href="/naruto">
+      </Link>
+      <Link href="/naruto">
         <button type="button">Naruto</button>
-      </a>
-      <a href="/onepiece">
+      </Link>
+      <Link href="/onepiece">
         <button type="button">One Piece</button>
-      </a>
+      </Link>
+      <Link href="/admin">
+        <button type="button">Ajouter</button>
+      </Link>
     </>
   );
 }

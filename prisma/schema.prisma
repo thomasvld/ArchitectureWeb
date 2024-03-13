@@ -1,0 +1,23 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Image {
+  id        Int     @id @default(autoincrement())
+  name      String
+  imageData String   // J'utilise String pour utiliser les chemins de fichier des images
+}
+
+model Rating {
+  id        Int     @id @default(autoincrement())
+  manga     String  // Nom du manga pour faire la moyenne des notes et faire apparaitre cette moyenne sur la page
+  content   String  // Notes des lecteurs 
+}
