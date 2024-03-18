@@ -1,4 +1,5 @@
 import HomeButton from "@/components/bandeau";
+import { FormEvent } from "react";
 
 export default function Admin() {
   return (

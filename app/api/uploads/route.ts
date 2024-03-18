@@ -1,5 +1,6 @@
 import path from "path";
 import fs from "fs/promises";
+import { storeImageDetails  } from "./script.ts";
 
 export const dynamic = 'force-dynamic' // defaults to auto
 export async function POST(request: Request) {
@@ -18,6 +19,8 @@ export async function POST(request: Request) {
     await fs.writeFile(filename, fileContent);
     console.log(filename)
     const [extension, ...name] = filename.split(".").reverse();
+
+    await storeImageDetails(filename)
     
     return Response.json({ mangaselect, file })
 }
