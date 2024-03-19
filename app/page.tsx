@@ -2,10 +2,13 @@ import Image from "next/image";
 import Layout from "./layout"; // Assurez-vous que le chemin est correct
 import MenuPopUpState from "../components/menu";
 import BasicRating from "@/components/rating";
+import HomeButton from "@/components/bandeau";
 
 export default function Home() {
   return (
     <>
+      <HomeButton />
+
       <h1>Projet Architecture Web Thomas Valade</h1>
 
       <p>

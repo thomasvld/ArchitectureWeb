@@ -5,8 +5,8 @@ export default function Admin() {
   return (
     <>
       <HomeButton />
-      <h2>Ajouter des scans : </h2>
-      <div>
+      <div id="divadmin">
+        <h2>Ajouter des scans : </h2>
         <form action="/api/uploads" method="post" encType="multipart/form-data">
           <label>Choisissez l'oeuvre : </label>
           <select name="mangaselect" id="manga-select">
