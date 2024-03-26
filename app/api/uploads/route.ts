@@ -27,9 +27,7 @@ export async function POST(request: Request) {
 }
 
 export async function GET(request: Request) {
-  const searchParams = useSearchParams();
-  const name = searchParams.get("name");
   const prisma = new PrismaClient();
-  const images = prisma.image.findMany({ where: { name: name || "" } });
+  const images = await prisma.image.findMany({});
   return Response.json({ images });
 }

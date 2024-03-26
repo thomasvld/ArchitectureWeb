@@ -6,8 +6,22 @@ import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
 export default function RowContextMenu() {
-  const [rows, setRows] = React.useState(initialRows);
+  const [rows, setRows] = React.useState([]);
   const [selectedRow, setSelectedRow] = React.useState<number>();
+
+  React.useEffect(function () {
+    (async function () {
+      const res = await fetch("/api/uploads");
+      const data = await res.json();
+      setRows(
+        data.images.map((item) => ({
+          id: item.id,
+          name: item.name,
+          image: item.imageData,
+        })),
+      );
+    })();
+  }, []);
 
   const [contextMenu, setContextMenu] = React.useState<{
     mouseX: number;
@@ -110,23 +124,5 @@ const columns = [
     field: "image",
     headerName: "Image",
     width: 140,
-  },
-];
-
-const initialRows = [
-  {
-    id: 1,
-    name: "Jane",
-    image: "Carter",
-  },
-  {
-    id: 2,
-    name: "Jack",
-    image: "Smith",
-  },
-  {
-    id: 3,
-    name: "Gill",
-    image: "Martin",
   },
 ];
