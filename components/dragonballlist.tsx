@@ -5,7 +5,7 @@ import { DataGrid, GridEventListener } from "@mui/x-data-grid";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 
-export default function RowContextMenuBleach() {
+export default function RowContextMenuDragonball() {
   const [rows, setRows] = React.useState([]);
   const [selectedRow, setSelectedRow] = React.useState<number>();
   const [image, setImage] = React.useState<String | undefined>();
@@ -24,7 +24,7 @@ export default function RowContextMenuBleach() {
           .filter((item: { name: string }) => {
             // Mettez ici la condition de filtrage
             // Par exemple, si vous voulez filtrer les éléments dont le nom commence par "A":
-            return item.name.startsWith("b");
+            return item.name.startsWith("d");
           }),
       );
     })();

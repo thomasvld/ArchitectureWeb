@@ -3,6 +3,7 @@ import Layout from "../layout"; // Assurez-vous que le chemin est correct
 import MenuPopUpState from "../../components/menu";
 import BasicRating from "@/components/rating";
 import HomeButton from "@/components/bandeau";
+import RowContextMenuNaruto from "@/components/narutolist";
 
 export default function Naruto() {
   return (
@@ -13,6 +14,7 @@ export default function Naruto() {
         Quel manga voulez-vous lire ? <MenuPopUpState />{" "}
       </label>
       <p>Retrouvez le dernier chapitre de Naruto ci-dessous : </p>
+      <RowContextMenuNaruto />
       <p>
         <BasicRating />
       </p>

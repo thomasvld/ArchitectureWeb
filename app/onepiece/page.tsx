@@ -3,6 +3,7 @@ import Layout from "../layout"; // Assurez-vous que le chemin est correct
 import MenuPopUpState from "../../components/menu";
 import BasicRating from "@/components/rating";
 import HomeButton from "@/components/bandeau";
+import RowContextMenuOnepiece from "@/components/onepiecelist";
 
 export default function Onepiece() {
   return (
@@ -13,6 +14,7 @@ export default function Onepiece() {
         Quel manga voulez-vous lire ? <MenuPopUpState />{" "}
       </label>
       <p>Retrouvez le dernier chapitre de One Piece ci-dessous : </p>
+      <RowContextMenuOnepiece />
       <p>
         <BasicRating />
       </p>

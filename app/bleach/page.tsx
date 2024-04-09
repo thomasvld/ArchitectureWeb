@@ -3,7 +3,7 @@ import Layout from "../layout"; // Assurez-vous que le chemin est correct
 import MenuPopUpState from "../../components/menu";
 import BasicRating from "@/components/rating";
 import HomeButton from "@/components/bandeau";
-import RowContextMenu from "@/components/bleachlist";
+import RowContextMenuBleach from "@/components/bleachlist";
 
 export default function Bleach() {
   return (
@@ -14,7 +14,7 @@ export default function Bleach() {
         Quel manga voulez-vous lire ? <MenuPopUpState />
       </label>
       <p id="bleach">Retrouvez le dernier chapitre de Bleach ci-dessous : </p>
-      <RowContextMenu />
+      <RowContextMenuBleach />
       <p>
         <BasicRating />
       </p>
