@@ -4,8 +4,11 @@ import * as React from "react";
 import { DataGrid, GridEventListener } from "@mui/x-data-grid";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import Box from "@mui/material/Box";
+import Modal from "@mui/material/Modal";
+import Button from "@mui/material/Button";
 
-export default function RowContextMenuDragonball() {
+export default function RowContextMenuBleach() {
   const [rows, setRows] = React.useState([]);
   const [selectedRow, setSelectedRow] = React.useState<number>();
   const [image, setImage] = React.useState<String | undefined>();
@@ -79,9 +82,13 @@ export default function RowContextMenuDragonball() {
     handleClose();
   };
 
+  const [open, setOpen] = React.useState(false);
+  const toggleOpen = () => setOpen(!open);
+
   const handleRowClick: GridEventListener<"rowClick"> = (params) => {
     console.log("Ligne cliquée :", params.row);
     setImage(params.row.image);
+    setOpen(true);
   };
 
   return (
@@ -118,7 +125,17 @@ export default function RowContextMenuDragonball() {
         <MenuItem onClick={convertToUppercase}>UPPERCASE</MenuItem>
         <MenuItem onClick={convertToLowercase}>lowercase</MenuItem>
       </Menu>
-      <p>Image/ {image}</p>
+      <p>Image/{image}</p>
+      <Modal
+        open={open}
+        onClose={toggleOpen}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <p>
+          Bonjour: <img src={"uploads/dragonball/" + image} />
+        </p>
+      </Modal>
     </div>
   );
 }
