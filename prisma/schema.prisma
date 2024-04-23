@@ -16,8 +16,10 @@ model Image {
   imageData String   // J'utilise String pour utiliser les chemins de fichier des images
 }
 
-model Users {
-  id        Int     @id @default(autoincrement())
-  email     String  // L'email d'une personne
-  password       String  // Le mot de passe  
+
+model User {
+  id         Int      @id @default(autoincrement())
+  name       String?
+  email      String   @unique
+  password   String
 }

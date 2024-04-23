@@ -8,6 +8,18 @@ import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import Button from "@mui/material/Button";
 
+const style = {
+  position: "absolute" as "absolute",
+  top: "50%",
+  left: "50%",
+  transform: "translate(-50%, -50%)",
+  width: 400,
+  bgcolor: "background.paper",
+  border: "2px solid #000",
+  boxShadow: 24,
+  p: 0.01,
+};
+
 export default function RowContextMenuBleach() {
   const [rows, setRows] = React.useState([]);
   const [selectedRow, setSelectedRow] = React.useState<number>();
@@ -126,15 +138,18 @@ export default function RowContextMenuBleach() {
         <MenuItem onClick={convertToLowercase}>lowercase</MenuItem>
       </Menu>
       <p>Image/{image}</p>
+
       <Modal
         open={open}
         onClose={toggleOpen}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <p>
-          Bonjour: <img src={"uploads/dragonball/" + image} />
-        </p>
+        <Box sx={style}>
+          <p>
+            <img src={"uploads/dragonball/" + image} />
+          </p>{" "}
+        </Box>
       </Modal>
     </div>
   );

@@ -6,8 +6,12 @@ CREATE TABLE "Image" (
 );
 
 -- CreateTable
-CREATE TABLE "Rating" (
+CREATE TABLE "User" (
     "id" INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-    "manga" TEXT NOT NULL,
-    "content" TEXT NOT NULL
+    "name" TEXT,
+    "email" TEXT NOT NULL,
+    "password" TEXT NOT NULL
 );
+
+-- CreateIndex
+CREATE UNIQUE INDEX "User_email_key" ON "User"("email");
