@@ -1,24 +1,29 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { useRouter } from "next/navigation";
+import { TokenContext } from "@/app/context/tokenContext";
+
 
 export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
+  //const { setToken } = useContext{ TokenContext }
   const router = useRouter();
 
   const submitData = async (e: React.SyntheticEvent, action: string) => {
     e.preventDefault();
-
+    console.log("email", email);
+    console.log("password", password);
     try {
       const body = { name, email, password, action };
-      await fetch(`/api/auth/${action}/`, {
+      const response = await fetch(`/api/auth/${action}/`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(body),
       });
-
+      const data = await response.json()
+      //setToken(data.Token)
       router.push("/");
     } catch (error) {
       console.error(error);

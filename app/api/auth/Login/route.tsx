@@ -1,8 +1,9 @@
-import prisma from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
 import { NextResponse } from "next/server";
 
+const prisma = new PrismaClient();
 const SECRET_KEY = process.env.SECRET_KEY;
 
 export async function POST(request: Request, response: Response) {
