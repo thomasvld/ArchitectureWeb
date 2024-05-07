@@ -105,3 +105,10 @@ body {
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
 
+input{
+  width: 10%;
+  padding: 4px;
+  margin: 3px;
+  box-sizing: 12px 8px;
+  border: 2px solid #ccc;
+}
