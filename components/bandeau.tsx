@@ -4,6 +4,7 @@ import Link from "next/link";
 export default function HomeButton() {
   return (
     <>
+    <center>
       <div id="divbandeau">
         <Link href="/">
           <button id="home" type="button">
@@ -28,6 +29,7 @@ export default function HomeButton() {
           </button>
         </Link>
       </div>
+      </center>
     </>
   );
 }

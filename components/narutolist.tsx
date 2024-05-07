@@ -137,7 +137,6 @@ export default function RowContextMenuBleach() {
         <MenuItem onClick={convertToUppercase}>UPPERCASE</MenuItem>
         <MenuItem onClick={convertToLowercase}>lowercase</MenuItem>
       </Menu>
-      <p>Image/{image}</p>
       <Modal
         open={open}
         onClose={toggleOpen}

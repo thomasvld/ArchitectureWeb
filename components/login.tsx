@@ -31,10 +31,9 @@ export default function LoginForm() {
   };
 
   return (
-    <>
+    <center>
       <div>
         <form>
-          <h3>Hello !</h3>
           <input
             autoFocus
             onChange={(e) => setName(e.target.value)}
@@ -64,6 +63,6 @@ export default function LoginForm() {
           </button>
         </form>
       </div>
-    </>
+    </center>
   );
 }

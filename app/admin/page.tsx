@@ -3,7 +3,7 @@ import { FormEvent } from "react";
 
 export default function Admin() {
   return (
-    <>
+    <center>
       <HomeButton />
       <div id="divadmin">
         <h2>Ajouter des scans : </h2>
@@ -30,6 +30,6 @@ export default function Admin() {
           <input type="submit" value="Envoyer"></input>
         </form>
       </div>
-    </>
+    </center>
   );
 }

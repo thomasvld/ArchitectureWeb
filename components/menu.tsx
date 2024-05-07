@@ -15,7 +15,7 @@ export default function MenuPopupState() {
     <PopupState variant="popover" popupId="demo-popup-menu">
       {(popupState) => (
         <React.Fragment>
-          <Button variant="contained" {...bindTrigger(popupState)}>
+          <Button id="buttonselect" variant="contained" {...bindTrigger(popupState)}>
             Choisissez votre manga
           </Button>
           <Menu {...bindMenu(popupState)}>
