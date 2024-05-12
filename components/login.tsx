@@ -55,10 +55,10 @@ export default function LoginForm() {
             type="password"
             value={password}
           />
-          <button type="button" onClick={(e) => submitData(e, "Login")}>
+          <button id="login" type="button" onClick={(e) => submitData(e, "Login")}>
             Login
           </button>
-          <button type="button" onClick={(e) => submitData(e, "Register")}>
+          <button id="register" type="button" onClick={(e) => submitData(e, "Register")}>
             Register
           </button>
         </form>
