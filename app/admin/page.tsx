@@ -27,7 +27,7 @@ export default function Admin() {
               accept=".jpg"
             ></input>
           </label>
-          <input type="submit" value="Envoyer"></input>
+          <input id="send" type="submit" value="Envoyer"></input>
         </form>
       </div>
     </center>
